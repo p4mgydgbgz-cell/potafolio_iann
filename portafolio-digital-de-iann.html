@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Digital de Iann</title>
+    <meta property="og:title" content="Portafolio Digital de Iann">
+    <meta property="og:description" content="Portafolio digital de Iann: negocios digitales, marketing, trading y objetivos a 5 años.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <script>
+        (function () {
+            try {
+                var guardado = localStorage.getItem('iann-tema');
+                var tema = guardado || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+                document.documentElement.setAttribute('data-theme', tema);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="bi bi-person-badge-fill"></i>
+                <span>Portafolio Digital de Iann</span>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a class="tab-link active" data-tab="quien-soy">Quién Soy</a></li>
+                <li><a class="tab-link" data-tab="proyectos">Proyectos 2026</a></li>
+                <li><a class="tab-link" data-tab="objetivos">Objetivos a 5 Años</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema"><i class="bi bi-moon-stars-fill"></i></button>
+                <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+                    <span class="barra"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- PESTAÑA 1: QUIÉN SOY -->
+        <section id="quien-soy" class="tab-content active">
+            <div class="section-header reveal">
+                <h1>Quién Soy</h1>
+                <p>Conoce un poco sobre mí y mi trayectoria</p>
+            </div>
+
+            <div class="card perfil reveal">
+                <div class="perfil-img">
+                    <img src="perfil-iann.jpg" alt="Foto de perfil de Iann" width="600" height="600">
+                </div>
+                <div>
+                    <h2>Iann</h2>
+                    <p style="color: var(--color-texto-secundario); max-width: 800px;">
+                        Apasionado por el crecimiento personal, los negocios digitales y la inversión. 
+                        Siempre en busca de nuevas habilidades para generar valor y construir proyectos a futuro.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card trayectoria reveal">
+                <h2>Mi Trayectoria</h2>
+                <div class="timeline">
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">Inicio - Formación Base</div>
+                        <h3>Descubrimiento y Aprendizaje</h3>
+                        <p style="color: var(--color-texto-secundario);">
+                            Comencé a explorar el mundo digital, interesándome por las oportunidades que ofrece internet para emprender y generar ingresos.
+                        </p>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">Desarrollo de Intereses</div>
+                        <h3>Enfoque a Negocios Digitales</h3>
+                        <p style="color: var(--color-texto-secundario);">
+                            Desarrollé un gran interés por el marketing digital, las ventas y el trading, dando mis primeros pasos en cada una de estas áreas.
+                        </p>
+                    </div>
+                    <div class="timeline-item reveal">
+                        <div class="timeline-date">Actualidad</div>
+                        <h3>Construyendo Mi Portafolio</h3>
+                        <p style="color: var(--color-texto-secundario);">
+                            Actualmente me encuentro poniendo en práctica mis conocimientos a través de proyectos, con el objetivo de escalar y generar resultados concretos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PESTAÑA 2: PROYECTOS REALIZADOS EN 2026 POR CADA MES -->
+        <section id="proyectos" class="tab-content">
+            <div class="section-header reveal">
+                <h1>Proyectos Realizados en 2026</h1>
+                <p>Seguimiento mensual de mis proyectos y metas</p>
+            </div>
+
+            <div class="progreso-ano reveal">
+                <div class="progreso-info">
+                    <span class="etiqueta"><i class="bi bi-graph-up-arrow"></i> Progreso del año 2026</span>
+                    <span class="valor" id="progreso-texto">Cargando…</span>
+                </div>
+                <div class="progreso-track">
+                    <div class="progreso-fill" id="progreso-fill"></div>
+                </div>
+            </div>
+
+            <div class="mes-grid">
+                <!-- ENERO -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Enero 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Planificación Estratégica</h3>
+                        <p style="color: var(--color-texto-secundario);">Definición de objetivos, roadmap anual y organización de recursos.</p>
+                        <span class="proyecto-estado estado-completado">Completado</span>
+                    </div>
+                </div>
+
+                <!-- FEBRERO -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Febrero 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Investigación de Nicho</h3>
+                        <p style="color: var(--color-texto-secundario);">Análisis de mercados para dropshipping y búsqueda de productos potenciales.</p>
+                        <span class="proyecto-estado estado-en-progreso">En Progreso</span>
+                    </div>
+                </div>
+
+                <!-- MARZO -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Marzo 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Fundamentos de Trading</h3>
+                        <p style="color: var(--color-texto-secundario);">Estudio teórico de análisis técnico, gráficos y gestión de riesgo.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- ABRIL -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Abril 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Marketing Digital - Prácticas</h3>
+                        <p style="color: var(--color-texto-secundario);">Aplicación de estrategias SEO, contenido y captación de tráfico.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- MAYO -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Mayo 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Tienda de Dropshipping</h3>
+                        <p style="color: var(--color-texto-secundario);">Creación y configuración de la primera tienda online para validar productos.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- JUNIO -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Junio 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Pruebas de Campañas Publicitarias</h3>
+                        <p style="color: var(--color-texto-secundario);">Testeo de anuncios para optimizar costos y conversión.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- JULIO -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Julio 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Trading en Demo</h3>
+                        <p style="color: var(--color-texto-secundario);">Puesta en práctica de estrategias en cuenta demo con registro de operaciones.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- AGOSTO -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Agosto 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Análisis de Resultados</h3>
+                        <p style="color: var(--color-texto-secundario);">Revisión de métricas de dropshipping y trading para optimizar estrategias.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- SEPTIEMBRE -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Septiembre 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Escalado de Proyectos</h3>
+                        <p style="color: var(--color-texto-secundario);">Escalado de campañas y productos con mejor rendimiento.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- OCTUBRE -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Octubre 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Gestión de Capital</h3>
+                        <p style="color: var(--color-texto-secundario);">Planificación para reinversión de ganancias obtenidas.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- NOVIEMBRE -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Noviembre 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Optimización Avanzada</h3>
+                        <p style="color: var(--color-texto-secundario);">Mejora de sistemas y automatizaciones para ahorrar tiempo.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+
+                <!-- DICIEMBRE -->
+                <div class="mes-card reveal">
+                    <div class="mes-titulo">
+                        <i class="bi bi-calendar3"></i> Diciembre 2026
+                    </div>
+                    <div class="proyecto-item">
+                        <h3>Balance Anual</h3>
+                        <p style="color: var(--color-texto-secundario);">Revisión de resultados, lecciones aprendidas y planificación para el siguiente año.</p>
+                        <span class="proyecto-estado estado-planificado">Planificado</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PESTAÑA 3: OBJETIVOS A LOS PRÓXIMOS 5 AÑOS -->
+        <section id="objetivos" class="tab-content">
+            <div class="section-header reveal">
+                <h1>Mis Objetivos a los Próximos 5 Años</h1>
+                <p>Un plan de acción enfocado al crecimiento y a la libertad financiera</p>
+            </div>
+
+            <div class="objetivos-grid">
+                <!-- AÑO 1 -->
+                <div class="objetivo-card reveal">
+                    <span class="año-badge">Año 1</span>
+                    <h3>Fundamentos y Aprendizaje</h3>
+                    <ul class="lista-objetivos">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Estudiar Marketing Digital: Aprender SEO, publicidad, contenido y analítica.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Inscribirme en clases particulares de ventas: Desarrollar habilidades de persuasión y cierre de ventas.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Aprender Trading: Estudiar análisis técnico, fundamental y gestión de riesgo.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AÑO 2 -->
+                <div class="objetivo-card reveal">
+                    <span class="año-badge">Año 2</span>
+                    <h3>Poner en Práctica</h3>
+                    <ul class="lista-objetivos">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Aplicar lo aprendido: Crear contenido, campañas y practicar trading en demo.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Iniciar Dropshipping: Lanzar mi primera tienda online y validar productos.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Optimizar operaciones: Automatizar procesos para ahorrar tiempo.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AÑO 3 -->
+                <div class="objetivo-card reveal">
+                    <span class="año-badge">Año 3</span>
+                    <h3>Escalar y Reinvertir</h3>
+                    <ul class="lista-objetivos">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Escalar Dropshipping: Potenciar productos con mejor rendimiento.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Invertir en Trading: Comenzar a invertir con capital generado, aplicando una buena gestión de riesgo.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Generar flujo de caja: Enfocarme a la consistencia y a la reinversión.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AÑO 4 -->
+                <div class="objetivo-card reveal">
+                    <span class="año-badge">Año 4</span>
+                    <h3>Creación de Activos</h3>
+                    <ul class="lista-objetivos">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Consolidar portafolio: Fortalecer mis proyectos digitales y trading.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Ahorrar e invertir: Incrementar el capital para inversiones a largo plazo.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Preparación para acciones: Estudiar empresas con potencial, enfocando análisis a Take Two.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AÑO 5 -->
+                <div class="objetivo-card reveal">
+                    <span class="año-badge">Año 5</span>
+                    <h3>Meta Final</h3>
+                    <ul class="lista-objetivos">
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Comprar acciones de Take Two: Ejecutar esta meta con capital propio generado.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Diversificar portafolio: Continuar invirtiendo y haciendo crecer mis activos.</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Libertad financiera: Mantener un sistema sostenible a largo plazo.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Portafolio Digital de Iann &copy; <span id="anio-actual">2026</span> - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
